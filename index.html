@@ -6,17 +6,47 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Psychic Game</title>
     <script src="assets/javascript/game.js"></script>
+    <!-- <link rel="stylesheet" href="assets/css/reset.css" /> -->
     <link rel="stylesheet" type="text/css" href="assets/css/style.css" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Amarante&display=swap"
+      rel="stylesheet"
+    />
   </head>
+
   <body>
     <header id="top">
       <div class="container">
-        <h1>Can I guess your letter?</h1>
-        <img
+        <!-- <img
           src="assets/images/third-eye-2886688_640_Psychic.jpg"
           alt="Psychic"
-        />
+        /> -->
+        <h1>Are you a Psychic?</h1>
       </div>
     </header>
+
+    <div id="main-container" class="mainBody">
+      <section class="main-section">
+        <h2>Welcome! Can you guess what letter I am thinking of?</h2>
+        <p>
+          Press any key to start. If you guess my letter, you win! If not, you
+          lose! Choose carefully.
+        </p>
+        <br />
+        <div>
+          <h4>Wins</h4>
+          <span id="win"></span>
+
+          <h4>Losses</h4>
+          <span id="loss"></span>
+          <p>
+            Guesses Left...
+            <span id="guesses"></span>
+          </p>
+          <p>Letters Used</p>
+          <span id="alreadyGuessed"></span>
+        </div>
+      </section>
+    </div>
   </body>
 </html>
