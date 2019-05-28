@@ -1,0 +1,22 @@
+#top {
+  position: fixed;
+  z-index: 99;
+  width: 100%;
+  margin: 0 0 40px;
+  overflow: auto;
+  color: white;
+  background: black;
+  text-align: center;
+}
+
+img {
+  position: relative;
+  float: inline-end;
+  width: 200px;
+  height: 200px;
+}
+
+alt {
+  position: relative;
+  float: right;
+}
