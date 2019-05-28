@@ -26,7 +26,7 @@ document.onkeyup = function(event) {
     remaining--;
   }
 
-  if (reamaining == 0) {
+  if (remaining == 0) {
     loss++;
     resetArray = [];
     guessesLeft = 10;
@@ -39,7 +39,7 @@ document.onkeyup = function(event) {
     console.log(resetArray);
   }
 
-  document.getElementById("win").innerHTML = Wins;
-  document.getElementById("loss").innerHTML = Losses;
-  document.getElementById("guessesLeft").innerHTML = Remaining;
+  document.getElementById("win").innerHTML = wins;
+  document.getElementById("loss").innerHTML = losses;
+  document.getElementById("guessesLeft").innerHTML = remaining;
 };
