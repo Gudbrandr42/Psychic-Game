@@ -5,19 +5,19 @@ var resetArray = [];
 var pickLetter = pickLetter;
 var letters = "abcdefghijklmnopqrstuvwxyz";
 
-pickletter = letters(Math.floor(Math.random() * letters.length));
+pickletter = letters[Math.floor(Math.random() * letters.length)];
 console.log(pickletter);
 
 function guess() {
-  pickLetter = letters(Math.floor(Math.random() * letters.length));
+  pickLetter = letters[Math.floor(Math.random() * letters.length)];
   console.log(pickLetter);
 }
 
 document.onkeyup = function(event) {
   var userChoice = event.key;
   if (userChoice === pickLetter) {
-    wins++;
-    reamaining = 10;
+    win++;
+    guessesLeft = 10;
     resetArray = [];
   }
 
@@ -27,9 +27,9 @@ document.onkeyup = function(event) {
   }
 
   if (reamaining == 0) {
-    losses++;
+    loss++;
     resetArray = [];
-    reamaining = 10;
+    guessesLeft = 10;
   }
 
   if (resetArray.indexOf(userChoice) >= 0) {
@@ -39,7 +39,7 @@ document.onkeyup = function(event) {
     console.log(resetArray);
   }
 
-  document.getElementById("wins").innerHTML = Wins;
+  document.getElementById("win").innerHTML = Wins;
   document.getElementById("loss").innerHTML = Losses;
   document.getElementById("guessesLeft").innerHTML = Remaining;
 };
