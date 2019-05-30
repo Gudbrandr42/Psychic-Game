@@ -2,21 +2,21 @@
 var wins = 0;
 var losses = 0;
 var remaining = 10;
-var resetArray = [];
-var pickLetter = "";
+var pickedAlphabet;
 var letters = "abcdefghijklmnopqrstuvwxyz";
 
-pickLetter = letters[Math.floor(Math.random() * letters.length)];
-console.log(pickLetter);
+pickedAlphabet = letters[Math.floor(Math.random() * letters.length)];
+console.log(pickedAlphabet);
 
 document.onkeyup = function(event) {
   var userChoice = event.key;
   console.log(userChoice);
-  if (userChoice === pickLetter) {
+  if (userChoice === pickedAlphabet) {
     wins++;
     console.log(wins);
   } else {
     remaining--;
+    pickedAlphabet;
   }
 
   if (remaining === 0) {
