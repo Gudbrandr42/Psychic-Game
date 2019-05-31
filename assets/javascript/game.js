@@ -18,6 +18,8 @@ document.onkeyup = function(event) {
   console.log(userChoice);
   someArray.push(userChoice);
   document.getElementById("letters").innerHTML = someArray;
+  console.log(someArray.indexOf(userChoice));
+  //console.log(someArray);
 
   if (userChoice === pickedAlphabet) {
     wins++;
@@ -32,6 +34,8 @@ document.onkeyup = function(event) {
     losses++;
     console.log(losses);
     remaining = 10;
+    someArray = [];
+    alert("Game Over!");
   }
 
   // if (resetArray.indexOf(userChoice) >= 0) {
