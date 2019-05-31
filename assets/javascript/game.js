@@ -4,19 +4,28 @@ var losses = 0;
 var remaining = 10;
 var pickedAlphabet;
 var letters = "abcdefghijklmnopqrstuvwxyz";
+var someArray = [];
 
+// the computer's generation of a random letter.
 pickedAlphabet = letters[Math.floor(Math.random() * letters.length)];
 console.log(pickedAlphabet);
 
+//this listens for the user's keying and logs right/wrong answers.
+//also to change reamaining chances for wrong answers.
+//supposed to list letters used and prevent the resuse of letters.
 document.onkeyup = function(event) {
   var userChoice = event.key;
   console.log(userChoice);
+  someArray.push(userChoice);
+  document.getElementById("letters").innerHTML = someArray;
+
   if (userChoice === pickedAlphabet) {
     wins++;
     console.log(wins);
+    pickedAlphabet = letters[Math.floor(Math.random() * letters.length)];
+    console.log(pickedAlphabet);
   } else {
     remaining--;
-    pickedAlphabet;
   }
 
   if (remaining === 0) {
