@@ -31,6 +31,7 @@ document.onkeyup = function(event) {
     console.log(wins);
     pickedAlphabet = letters[Math.floor(Math.random() * letters.length)];
     console.log(pickedAlphabet);
+    alert("You win! You're the champ!");
   } else {
     remaining--;
   }
