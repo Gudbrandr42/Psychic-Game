@@ -3,6 +3,7 @@ var wins = 0;
 var losses = 0;
 var remaining = 10;
 var pickedAlphabet;
+var previousGuess = [];
 var letters = "abcdefghijklmnopqrstuvwxyz";
 var someArray = [];
 
@@ -15,6 +16,10 @@ console.log(pickedAlphabet);
 //supposed to list letters used and prevent the resuse of letters.
 document.onkeyup = function(event) {
   var userChoice = event.key;
+  if (previousGuess.includes(userChoice)) {
+    return;
+  }
+  previousGuess.push(userChoice);
   console.log(userChoice);
   someArray.push(userChoice);
   document.getElementById("letters").innerHTML = someArray;
@@ -35,7 +40,7 @@ document.onkeyup = function(event) {
     console.log(losses);
     remaining = 10;
     someArray = [];
-    alert("Game Over!");
+    alert("Ha! Loser, game over! Try again!");
   }
 
   // if (resetArray.indexOf(userChoice) >= 0) {
